@@ -1,8 +1,8 @@
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.118/build/three.module.js';
+import * as THREE from 'https://unpkg.com/three@0.150.1/build/three.module.js';
 
-import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import {FBXLoader} from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/FBXLoader.js';
+import { DRACOLoader } from 'https://unpkg.com/three@0.150.1/examples/jsm/loaders/DRACOLoader.js';
+import { GLTFLoader } from 'https://unpkg.com/three@0.150.1/examples/jsm/loaders/GLTFLoader.js';
+import {FBXLoader} from 'https://unpkg.com/three@0.150.1/examples/jsm/loaders/FBXLoader.js';
 
 import {entity} from './entity.js';
 
@@ -88,7 +88,7 @@ export const gltf_component = (() => {
     _LoadGLB() {
       const dracoLoader = new DRACOLoader();
 
-      dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.4.1/');
+      dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/');
   
       const loader = new GLTFLoader();
       loader.setDRACOLoader(dracoLoader);
