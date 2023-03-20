@@ -36,6 +36,10 @@ export default class HackNSlashDemo {
   constructor() {
     this._Initialize();
   }
+  
+  _TestFunction() {
+    console.log('Test function called!');
+  }
 
   _Initialize() {
     this.renderer = new THREE.WebGLRenderer({
