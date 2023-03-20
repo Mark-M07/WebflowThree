@@ -90,7 +90,7 @@ export const player_entity = (() => {
 
     _LoadModels() {
       const loader = new FBXLoader();
-      loader.setPath('/models/guard/');
+      loader.setPath('https://cdn.jsdelivr.net/gh/Mark-M07/WebflowThree@main/public/models/guard/');
       loader.load('Boy.fbx', (fbx) => {
         this._target = fbx;
         this._target.scale.setScalar(0.035);
