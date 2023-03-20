@@ -111,10 +111,6 @@ export default class HackNSlashDemo {
     const sky = new THREE.Mesh(skyGeo, skyMat);
     this._scene.add(sky);
   }
-  
-  function testButton(){
-    console.log("Jump Pressed!");  
-  }
 
   _LoadEnvironment() {
     const e = new entity.Entity();
