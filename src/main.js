@@ -111,31 +111,10 @@ export default class HackNSlashDemo {
     const sky = new THREE.Mesh(skyGeo, skyMat);
     this._scene.add(sky);
   }
-
-  /*async LoadAssets(scene) {
-    const dracoLoader = new DRACOLoader();
-
-    dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.4.1/');
-
-    const gltfLoader = new GLTFLoader();
-    gltfLoader.setDRACOLoader(dracoLoader);
-
-    gltfLoader.load('/models/Farm.glb', function (gltf) {
-      scene.add(gltf.scene);
-    },
-      // called as loading progresses
-      function (xhr) {
-        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-      },
-      // called when loading has errors
-      function (error) {
-        console.log('An error happened: ' + error);
-      }
-    );
-
-    // Release decoder resources.
-    dracoLoader.dispose();
-  }*/
+  
+  function testButton(){
+    console.log("Jump Pressed!");  
+  }
 
   _LoadEnvironment() {
     const e = new entity.Entity();
