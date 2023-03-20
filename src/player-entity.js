@@ -9,7 +9,6 @@ import { entity } from './entity.js';
 import { finite_state_machine } from './finite-state-machine.js';
 import { player_state } from './player-state.js';
 import Input from './Input.js';
-import nipplejs from 'https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.10.1/nipplejs.min.js';
 
 export const player_entity = (() => {
 
