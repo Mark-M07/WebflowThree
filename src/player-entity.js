@@ -1,11 +1,10 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.118.1/build/three.module.js';
+import * as nipplejs from 'https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.10.1/nipplejs.min.js';
 
 import { FBXLoader } from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/FBXLoader.js';
-
 import { entity } from './entity.js';
 import { finite_state_machine } from './finite-state-machine.js';
 import { player_state } from './player-state.js';
-import nipplejs from 'nipplejs';
 import { Capsule } from 'three/addons/math/Capsule.js';
 import { Octree } from 'three/addons/math/Octree.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
