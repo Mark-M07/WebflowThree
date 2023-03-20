@@ -32,7 +32,7 @@ void main() {
   gl_FragColor = vec4( mix( bottomColor, topColor, max( pow( max( h , 0.0), exponent ), 0.0 ) ), 1.0 );
 }`;
 
-class HackNSlashDemo {
+export default class HackNSlashDemo {
   constructor() {
     this._Initialize();
   }
@@ -235,7 +235,3 @@ class HackNSlashDemo {
     this._entityManager.Update(timeElapsedS);
   }
 }
-
-//window.addEventListener('DOMContentLoaded', () => {
-  //new HackNSlashDemo();
-//});
