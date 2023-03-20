@@ -2,8 +2,8 @@ import * as THREE from 'https://unpkg.com/three@0.150.1/build/three.module.js';
 import * as nipplejs from 'https://cdnjs.cloudflare.com/ajax/libs/nipplejs/0.10.1/nipplejs.min.js';
 
 import { FBXLoader } from 'https://unpkg.com/three@0.150.1/examples/jsm/loaders/FBXLoader.js';
-import { Capsule } from './Capsule.js';
-import { Octree } from 'https://unpkg.com/three@0.150.1/examples/jsm/math/Octree.js';
+//import { Capsule } from './Capsule.js';
+//import { Octree } from 'https://unpkg.com/three@0.150.1/examples/jsm/math/Octree.js';
 import { GLTFLoader } from 'https://unpkg.com/three@0.150.1/examples/jsm/loaders/GLTFLoader.js';
 
 import { entity } from './entity.js';
