@@ -186,8 +186,8 @@ class HackNSlashDemo {
     this._entityManager.Add(levelUpSpawner, 'level-up-spawner');
 
     const player = new entity.Entity();
-    player.AddComponent(new player_input.BasicCharacterControllerInput(params));
-    player.AddComponent(new player_entity.BasicCharacterController(params));
+    //player.AddComponent(new player_input.BasicCharacterControllerInput(params));
+    //player.AddComponent(new player_entity.BasicCharacterController(params));
     this._entityManager.Add(player, 'player');
 
     const camera = new entity.Entity();
