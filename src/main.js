@@ -161,7 +161,7 @@ export default class HackNSlashDemo {
     cow.AddComponent(new animal_entity.AnimalFSM(params));
     cow.AddComponent(new gltf_component.AnimatedModelComponent({
       scene: this._scene,
-      resourcePath: '/models/animals/',
+      resourcePath: 'https://cdn.jsdelivr.net/gh/Mark-M07/WebflowThree/main@public/models/animals/',
       resourceName: 'Cow.fbx',
       resourceAnimation: 'Cow.fbx',
       position: p,
