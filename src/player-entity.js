@@ -65,7 +65,7 @@ export const player_entity = (() => {
       this.yValue = 0;
 
       const options = {
-        zone: document.getElementById('joystickWrapper'),
+        zone: document.getElementById('joystick-wrapper'),
         size: 120,
         multitouch: true,
         mode: 'static',
@@ -127,7 +127,7 @@ export const player_entity = (() => {
         };
 
         const loader = new FBXLoader(this._manager);
-        loader.setPath('/models/guard/');
+        loader.setPath('https://cdn.jsdelivr.net/gh/Mark-M07/WebflowThree@main/public/models/guard/');
         loader.load('Idle.fbx', (a) => { _OnLoad('idle', a); });
         loader.load('Walking.fbx', (a) => { _OnLoad('walk', a); });
         loader.load('WalkingBackwards.fbx', (a) => { _OnLoad('walkBack', a); });
@@ -142,7 +142,7 @@ export const player_entity = (() => {
       this.worldOctree = new Octree();
 
       const loader2 = new GLTFLoader();
-      loader2.setPath('/models/');
+      loader2.setPath('https://cdn.jsdelivr.net/gh/Mark-M07/WebflowThree@main/public/models/');
       loader2.load('Navmesh.glb', (gltf) => {
 
         this._params.scene.add(gltf.scene);
