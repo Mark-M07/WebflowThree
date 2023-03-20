@@ -9,7 +9,7 @@ import { GLTFLoader } from 'https://unpkg.com/three@0.150.1/examples/jsm/loaders
 import { entity } from './entity.js';
 import { finite_state_machine } from './finite-state-machine.js';
 import { player_state } from './player-state.js';
-import Input from './Input.js';
+import Input from '/Input';
 
 export const player_entity = (() => {
 
