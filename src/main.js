@@ -141,7 +141,7 @@ export default class HackNSlashDemo {
     const e = new entity.Entity();
     e.AddComponent(new gltf_component.StaticModelComponent({
       scene: this._scene,
-      resourcePath: '/models/',
+      resourcePath: 'https://cdn.jsdelivr.net/gh/Mark-M07/WebflowThree@main/public/models',
       resourceName: 'Farm.glb',
       scale: 6,
       //castShadow: true,
