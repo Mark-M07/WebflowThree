@@ -2,6 +2,7 @@ export const entity_manager = (() => {
 
   class EntityManager {
     constructor() {
+      console.log("entity_manager test!");
       this._ids = 0;
       this._entitiesMap = {};
       this._entities = [];
