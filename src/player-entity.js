@@ -5,9 +5,9 @@ import { FBXLoader } from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/j
 import { entity } from './entity.js';
 import { finite_state_machine } from './finite-state-machine.js';
 import { player_state } from './player-state.js';
-import { Capsule } from 'three/addons/math/Capsule.js';
-import { Octree } from 'three/addons/math/Octree.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { Capsule } from 'https://unpkg.com/three@0.150.1/examples/jsm/math/Capsule.js';
+import { Octree } from 'https://unpkg.com/three@0.150.1/examples/jsm/math/Octree.js';
+import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/GLTFLoader.js';
 import Input from '/Input'
 
 export const player_entity = (() => {
