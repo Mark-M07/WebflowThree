@@ -25,6 +25,9 @@ export const player_entity = (() => {
       this._AddState('walkBack', player_state.WalkBackState);
       this._AddState('run', player_state.RunState);
       this._AddState('jump', player_state.JumpState);
+      
+      const button = document.getElementById('jump-button');
+      button.addEventListener('click', () => { playerJump(); });
     }
   };
 
@@ -218,8 +221,9 @@ export const player_entity = (() => {
 
       }
       else if (Input.GetKeyDown('Space')) {
-        this.playerVelocity.y = 30;
-        this._stateMachine.Update(timeInSeconds, 4);
+        playerJump();
+        //this.playerVelocity.y = 30;
+        //this._stateMachine.Update(timeInSeconds, 4);
       }
 
       this.playerVelocity.addScaledVector(this.playerVelocity, damping);
@@ -233,6 +237,11 @@ export const player_entity = (() => {
       controlObject.position.copy(this.playerCollider.end);
 
       this._parent.SetPosition(controlObject.position);
+    }
+    
+    playerJump() {
+        this.playerVelocity.y = 30;
+        this._stateMachine.Update(timeInSeconds, 4);
     }
 
     playerCollisions() {
