@@ -44,12 +44,13 @@ export const player_entity = (() => {
       super();
       this._Init(params);
     }
-    this.inSeconds = 0;
+    
     _Init(params) {
       this._params = params;
       this.xValue = 0;
       this.yValue = 0;
       this.GRAVITY = 80;
+      this.inSeconds = 0;
 
       this._animations = {};
       this._stateMachine = new CharacterFSM(
@@ -158,7 +159,7 @@ export const player_entity = (() => {
         });
       });
     }
-    this.inSeconds = 0;
+
     Update(timeInSeconds) {
       if (!this._stateMachine._currentState) {
         return;
