@@ -6,7 +6,7 @@ import { entity } from './entity.js';
 import { gltf_component } from './gltf-component.js';
 import { player_input } from './player-input.js';
 import { level_up_component } from './level-up-component.js';
-import { animal_entity } from './animal-entity.js'; 
+import { animal_entity } from './animal-entity.js';
 
 const _VS = `
 varying vec3 vWorldPosition;
