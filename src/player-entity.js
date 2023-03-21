@@ -59,8 +59,14 @@ export const player_entity = (() => {
       this._LoadModels();
       this._addJoystick();
       
-      const button = document.getElementById('jump-button');
-      button.addEventListener('click', () => { this.playerJump(this.inSeconds); });
+      document.addEventListener('touchstart', (event) => {
+        if (event.target.id === 'jump-button') {
+          this.playerJump(this.inSeconds);
+        }
+      });
+      
+      //const button = document.getElementById('jump-button');
+      //button.addEventListener('click', () => { this.playerJump(this.inSeconds); });
     }
 
     _addJoystick() {
