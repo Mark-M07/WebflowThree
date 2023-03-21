@@ -27,7 +27,7 @@ export const player_entity = (() => {
       this._AddState('jump', player_state.JumpState);
       
       const button = document.getElementById('jump-button');
-      button.addEventListener('click', () => { playerJump(); });
+      button.addEventListener('click', () => { this.playerJump(); });
     }
   };
 
@@ -221,7 +221,7 @@ export const player_entity = (() => {
 
       }
       else if (Input.GetKeyDown('Space')) {
-        playerJump();
+        this.playerJump();
         //this.playerVelocity.y = 30;
         //this._stateMachine.Update(timeInSeconds, 4);
       }
