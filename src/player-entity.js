@@ -25,9 +25,6 @@ export const player_entity = (() => {
       this._AddState('walkBack', player_state.WalkBackState);
       this._AddState('run', player_state.RunState);
       this._AddState('jump', player_state.JumpState);
-      
-      const button = document.getElementById('jump-button');
-      button.addEventListener('click', () => { this.playerJump(); });
     }
   };
 
@@ -47,7 +44,7 @@ export const player_entity = (() => {
       super();
       this._Init(params);
     }
-
+    this.inSeconds = 0;
     _Init(params) {
       this._params = params;
       this.xValue = 0;
@@ -60,6 +57,9 @@ export const player_entity = (() => {
 
       this._LoadModels();
       this._addJoystick();
+      
+      const button = document.getElementById('jump-button');
+      button.addEventListener('click', () => { this.playerJump(this.inSeconds); });
     }
 
     _addJoystick() {
@@ -158,7 +158,7 @@ export const player_entity = (() => {
         });
       });
     }
-
+    this.inSeconds = 0;
     Update(timeInSeconds) {
       if (!this._stateMachine._currentState) {
         return;
@@ -171,6 +171,8 @@ export const player_entity = (() => {
         state = 2; // Running
       if (this.yValue < -0.1)
         state = 3; // Walking Backwards
+      
+      this.inSeconds = timeInSeconds;
 
       this._stateMachine.Update(timeInSeconds, state);
 
@@ -221,7 +223,7 @@ export const player_entity = (() => {
 
       }
       else if (Input.GetKeyDown('Space')) {
-        this.playerJump();
+        this.playerJump(this.inSeconds);
         //this.playerVelocity.y = 30;
         //this._stateMachine.Update(timeInSeconds, 4);
       }
@@ -239,7 +241,7 @@ export const player_entity = (() => {
       this._parent.SetPosition(controlObject.position);
     }
     
-    playerJump() {
+    playerJump(timeInSeconds) {
         this.playerVelocity.y = 30;
         this._stateMachine.Update(timeInSeconds, 4);
     }
